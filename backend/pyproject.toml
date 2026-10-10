@@ -1,0 +1,47 @@
+[project]
+name = "pinaka-backend"
+version = "1.0.0"
+description = "Backend API for PINAKA multi-sensor AI drone detection platform"
+authors = [{name = "PINAKA Team"}]
+dependencies = [
+    "fastapi>=0.104.0",
+    "uvicorn[standard]>=0.27.0",
+    "python-multipart>=0.0.6",
+    "pydantic>=2.5.0",
+    "pydantic-settings>=2.1.0",
+    "torch>=2.3.0",
+    "transformers>=4.40.0",
+    "accelerate>=0.27.0",
+    "sentence-transformers>=2.6.0",
+    "numpy>=1.26.0",
+    "opencv-python>=4.8.0",
+    "scikit-learn>=1.4.0",
+    "scipy>=1.11.0",
+    "redis>=5.0.0",
+    "python-dotenv>=1.0.0",
+    "python-magic>=0.4.27",
+    "aiofiles>=23.2.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+    "httpx>=0.25.0",
+    "black>=24.0.0",
+    "isort>=5.13.0",
+    "flake8>=7.0.0",
+    "mypy>=1.8.0",
+    "pre-commit>=3.6.0"
+]
+
+[build-system]
+requires = ["setuptools>=65.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+line-length = 100
+target-version = ['py311']
+
+[tool.isort]
+profile = "black"
